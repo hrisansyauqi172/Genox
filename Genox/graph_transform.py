@@ -700,6 +700,7 @@ class GraphTransform:
                                                                  beta=beta, lambda_corr=lambda_corr, sigma_d=sigma_d, sigma_theta=sigma_theta, alpha=alpha)
         else:
             descriptor_cols = ["atomic_number"]
+            descriptor_df = pd.DataFrame({"atomic_number": atomic_numbers_list})
 
         for i, sym in enumerate(symbols):
             G_nx.add_node(i,
